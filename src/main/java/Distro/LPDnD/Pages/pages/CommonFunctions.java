@@ -178,11 +178,24 @@ public class CommonFunctions {
 	 * Method to wait untill visibility of element
 	 */
 	public void waitTillVisbilityOfElement(By locator) {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		} catch (NoSuchElementException e) {
 			System.out.println((" " + locator.toString() + " Element is not visible."));
+		}
+	}
+
+	/*
+	 * Method to verify notification
+	 */
+	// Verify Notification
+	public void verifyNotification(String Module, String expectedNotification) {
+		String actualNotification = getText(Shared_OR.notification);
+		if (actualNotification.equals(expectedNotification)) {
+			System.out.println(Module + " is added successfully");
+		} else {
+			System.out.println("Failed to add " + Module);
 		}
 	}
 }

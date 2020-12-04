@@ -5,26 +5,29 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Distro.LPDnD.Pages.pages.login.dashboard.Dashboard;
-import Distro.LPDnD.Pages.pages.login.dashboard.masters.AddressMaster.State.State;
+import Distro.LPDnD.Pages.pages.login.dashboard.masters.AddressMaster.City.City;
 import Scenarios.Suite.BaseSuite.LPDndBaseSuite;
 
-public class StateSuite extends LPDndBaseSuite {
-	@BeforeMethod
-	public void NavigateToCountryMaster() {
+public class CitySuite extends LPDndBaseSuite {
+	public City city;
+	public Dashboard dashboard;
 
-		State state = new State(driver);
-		state.navigateToStateMaster();
+	@BeforeMethod
+	public void navigateToCityMaster() {
+
+		city = new City(driver);
+		city.navigateToCityMaster();
 	}
 
 	@Test(priority = 1)
-	public void addState() {
-		State state = new State(driver);
-		state.addState();
+	public void addCity() {
+		city = new City(driver);
+		city.addCity();
 	}
 
 	@AfterMethod
 	public void navigateToDashBoard() {
-		Dashboard dashboard = new Dashboard(driver);
+		dashboard = new Dashboard(driver);
 		dashboard.navigateToDashboard();
 	}
 

@@ -12,6 +12,7 @@ import Scenarios.Suite.BaseSuite.LPDndBaseSuite;
 
 public class CountrySuite extends LPDndBaseSuite {
 	public Country country;
+	public Dashboard dashboard;
 
 	@BeforeMethod
 	public void navigateToCountryMaster() {
@@ -22,13 +23,13 @@ public class CountrySuite extends LPDndBaseSuite {
 
 	@Test(priority = 1)
 	public void addCountry() {
-		Country country = new Country(driver);
+		country = new Country(driver);
 		country.addCountry();
 	}
 
 	@AfterMethod
 	public void navigateToDashBoard() {
-		Dashboard dashboard = new Dashboard(driver);
+		dashboard = new Dashboard(driver);
 		dashboard.navigateToDashboard();
 	}
 
