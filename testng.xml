@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<Method>
+				<parameter name="countryName" value="Australia" />
+				<parameter name="countryShortName" value="AUS" />
+			</Method>
+			<class name="Scenarios.Suite.AppSuite.CountrySuite" />
+
+			<class name="Scenarios.Suite.AppSuite.StateSuite" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

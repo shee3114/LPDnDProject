@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" parallel="none">
+  <test name="Default test(failed)" parallel="none">
+    <classes>
+      <class name="Scenarios.Suite.AppSuite.CountrySuite">
+        <methods>
+          <include name="navigateToDashBoard"/>
+          <include name="launchBrowserAndNavigateToDistro"/>
+          <include name="navigateToCountryMaster"/>
+          <include name="addCountry"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Scenarios.Suite.AppSuite.CountrySuite -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
